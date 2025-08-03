@@ -1,69 +1,27 @@
-# React + TypeScript + Vite
+# XML Diff Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一個簡潔直覺的 XML 差異比對元件，使用 React + TypeScript + Vite 打造，適合整合至你的前端應用中。
 
-Currently, two official plugins are available:
+## 🔧 技術棧
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- TypeScript
+- Vite
+- styled-components
+- [diff](https://www.npmjs.com/package/diff)
 
-## Expanding the ESLint configuration
+## ✨ 功能特色
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ✅ **行級比對**：保留 XML 結構與原始格式
+- ✅ **新增內容**：以綠色背景顯示
+- ✅ **刪除內容**：以紅色背景與刪除線顯示
+- ✅ **效能優化**：使用 `React.useMemo` 減少重複運算
+- ✅ **樣式模組化**：使用 `styled-components` 撰寫樣式，方便維護與擴充
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🔮 未來可擴充功能（建議）
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- [ ] 折疊未變更區塊
+- [ ] 支援字元層級差異（`diffWordsWithSpace`）
+- [ ] 顯示行號
+- [ ] XML 語法高亮
+- [ ] 差異結果匯出或複製
