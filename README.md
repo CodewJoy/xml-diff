@@ -1,6 +1,8 @@
 # XML Diff Viewer
 
-A XML diff comparison component built with React, TypeScript, and Vite
+[Demo Link](https://github.com/CodewJoy/xml-diff)
+
+A clean and intuitive XML diff comparison component built with React, TypeScript, and Vite
 
 🔧 Tech Stack
 
@@ -8,7 +10,7 @@ A XML diff comparison component built with React, TypeScript, and Vite
 - TypeScript
 - Vite
 - styled-components
-- diff
+- [diff](https://www.npmjs.com/package/diff)
 
 ✨ Features
 ✅ Line-level comparison: Preserves XML structure and original formatting
