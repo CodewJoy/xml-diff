@@ -1,6 +1,6 @@
 # XML Diff Viewer
 
-[Demo Link](https://github.com/CodewJoy/xml-diff)
+[Demo Link](https://codewjoy.github.io/xml-diff/)
 
 A clean and intuitive XML diff comparison component built with React, TypeScript, and Vite
 
